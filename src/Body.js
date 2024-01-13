@@ -19,8 +19,8 @@ class Body extends Component {
         const activeGlasses = data.find(glasses => glasses.id === activeButtonId);
 
         return (
-            <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                <div style={{ width: '480px', position: 'relative', height: '585px' }}>
+            <div className='container' style={{ display: 'flex', justifyContent: 'space-around' }}>
+                <div className='imageContainer' style={{ width: '480px', position: 'relative', height: '585px' }}>
                     <img src='/glassesImage/model.jpg' alt='' style={{ position: 'absolute' }} />
                     <img
                         src={currentImgUrl}
@@ -47,13 +47,12 @@ class Body extends Component {
                         <p>{activeGlasses.desc}</p>
                     </div>
                 </div>
-                <div style={{ display: 'flex', maxWidth: '600px', flexWrap: 'wrap', gap: '10px', alignSelf: 'start' }}>
+                <div className='glassesContainer'>
                     <h3 style={{ width: '100%' }}>Choose your glasses</h3>
                     {data.map(glasses => (
                         <button
                             key={glasses.id}
                             style={{
-                                width: 'calc(25% - 10px)',
                                 border: activeButtonId === glasses.id ? '2px solid #6fbedb' : '1px solid',
                                 background: activeButtonId === glasses.id ? 'lightblue' : 'transparent',
                                 padding: '24px 5px',

@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.imageContainer {
+    width: 480px;
+    position: relative;
+    height: 585px;
+}
+
+.glassesContainer {
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-self: start;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        justify-content: space-between;
+    }
+    .imageContainer,
+    .glassesContainer {
+        max-width: 100%;
+        align-self: start;
+    }
+
+    .glassesContainer {
+        max-width: 400px;
+        gap: 5px;
+    }
+
+    .glassesContainer button {
+        width: calc(30% - 10px);
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .imageContainer,
+    .glassesContainer {
+        max-width: 100%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .imageContainer,
+    .glassesContainer {
+        width: 100%;
+    }
+
+    .glassesContainer {
+        align-self: center;
+    }
+}
