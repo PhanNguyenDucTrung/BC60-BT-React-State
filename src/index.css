@@ -24,6 +24,9 @@
     align-self: start;
 }
 
+.glassesContainer button {
+    width: calc(25% - 10px);
+}
 @media screen and (max-width: 1200px) {
     .container {
         justify-content: space-between;
@@ -40,19 +43,23 @@
     }
 
     .glassesContainer button {
-        width: calc(30% - 10px);
+        width: calc(25% - 10px);
     }
 }
 
 @media screen and (max-width: 980px) {
     .container {
         flex-direction: column;
+        row-gap: 20px;
     }
 
     .imageContainer,
     .glassesContainer {
         max-width: 100%;
         align-self: center;
+    }
+    .glassesContainer button {
+        width: calc(20% - 10px);
     }
 }
 
